@@ -406,3 +406,30 @@
       ) : (
         <Text>Loading...</Text>
       )}
+
+      
+          <View style={{ flex: 1, backgroundColor: 'white' }}>
+            <View
+              style={[
+                {
+                  paddingHorizontal: wp(5),
+                  marginVertical: hp(1.5),
+                },
+              ]}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-around',
+                  paddingVertical: hp(2),
+                  backgroundColor: '#0099ff',
+                  borderRadius: 50,
+                }}>
+                <View>
+                  <Text style={styles.toggletext}>All Bids</Text>
+                </View>
+                <View style={{backgroundColor:'white',height:'100%'}}>
+                  <Text style={styles.toggletext}>Bid Statistics</Text>
+                </View>
+              </View>
+            </View>
+          </View>

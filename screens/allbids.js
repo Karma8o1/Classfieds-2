@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 import React, { useState, useEffect, useRef } from 'react';
 // import { Switch } from 'react-native-switch';
 //Styling imports
@@ -23,11 +25,9 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import { Divider } from 'react-native-elements';
-
 import PagerView from 'react-native-pager-view';
 
-const App = () => {
+const App = ({navigation}) => {
   //    for view pager
   const pageRef = useRef(null);
   const [page, setPage] = useState(1);
@@ -37,10 +37,70 @@ const App = () => {
     setPage(pageNum + 1);
   };
 
+  const [color, setColor] = useState({
+    all: '#0099ff',
+    stats: '#fff',
+    alltext: '#fff',
+    statstext: '#000',
+  });
+
+  // sample data for testing
+  const [data, setData] = useState([
+    {
+      name: 'Alex John Doe',
+      bid: '56.00',
+      image:
+        'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+      id: 0,
+    },
+    {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 1,
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 2,
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 3,
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 4,
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 5,
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 6,
+      },
+  ]);
+
   return (
     <View style={styles.container}>
       <ScrollView
-        style={{ flexGrow: 1, width: '100%', backgroundColor: 'gray' }}>
+        style={{ flexGrow: 1, width: '100%', backgroundColor: 'white' }}>
         <View>
           <View style={styles.header}>
             <TouchableOpacity
@@ -51,37 +111,86 @@ const App = () => {
             </TouchableOpacity>
             <Text style={{ color: 'white', marginLeft: wp(2) }}>All Bids</Text>
           </View>
-          <View style={{flex:1,backgroundColor:'white'}}>
-            {/* <Switch
-              value={true}
-              onValueChange={val => console.log(val)}
-              disabled={false}
-              activeText={'On'}
-              inActiveText={'Off'}
-              circleSize={30}
-              barHeight={1}
-              circleBorderWidth={3}
-              backgroundActive={'green'}
-              backgroundInactive={'gray'}
-              circleActiveColor={'#30a566'}
-              circleInActiveColor={'#000000'}
-              changeValueImmediately={true}
-              //   renderInsideCircle={() => <CustomComponent />} // custom component to render inside the Switch circle (Text, Image, etc.)
-              //   changeValueImmediately={true} // if rendering inside circle, change state immediately or wait for animation to complete
-              innerCircleStyle={{
+          <View style={{ flex: 1, backgroundColor: '#F0F8FF', width: '100%' }}>
+            <View
+              style={{
+                height: hp(10),
                 alignItems: 'center',
-                justifyContent: 'center',
-              }} // style for inner animated circle for what you (may) be rendering inside the circle
-              outerCircleStyle={{}} // style for outer animated circle
-              renderActiveText={false}
-              renderInActiveText={false}
-              switchLeftPx={2} // denominator for logic when sliding to TRUE position. Higher number = more space from RIGHT of the circle to END of the slider
-              switchRightPx={2} // denominator for logic when sliding to FALSE position. Higher number = more space from LEFT of the circle to BEGINNING of the slider
-              switchWidthMultiplier={2} // multipled by the `circleSize` prop to calculate total width of the Switch
-              switchBorderRadius={30} // Sets the border Radius of the switch slider. If unset, it remains the circleSize.
-            /> */}
+                justifyContent: 'space-around',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  width: '75%',
+                  height: hp(7),
+                  borderRadius: 50,
+                  backgroundColor: color.all,
+                }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    setColor({
+                      all: '#0099ff',
+                      stats: '#fff',
+                      alltext: '#fff',
+                      statstext: '#000',
+                    });
+                  }}
+                  style={{ paddingHorizontal: wp(5) }}>
+                  <Text style={[styles.toggletext, { color: color.alltext }]}>
+                    All Bids
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    setColor({
+                      all: '#fff',
+                      stats: '#0099ff',
+                      alltext: '#000',
+                      statstext: '#fff',
+                    });
+                  }}
+                  style={{
+                    height: hp(7),
+                    justifyContent: 'center',
+                    paddingHorizontal: wp(5),
+                    borderRadius: 50,
+                    borderWidth: 1,
+                    borderColor: '#f8f8f8',
+                    backgroundColor: color.stats,
+                  }}>
+                  <Text style={styles.toggletext}>Bids Statistics</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+          <View style={{ flex: 1, paddingTop: hp(2) }}>
+            <PagerView
+              initialPage={0}
+              ref={pageRef}
+              transitionStyle="curl"
+              onPageSelected={e => {
+                setPage(e.nativeEvent.position + 1);
+              }}
+              scrollEnabled={true}
+              style={{
+                flex: 1,
+                height: hp(70),
+                width: '100%',
+                backgroundColor: 'white',
+              }}>
+              <View key="0">
+                <Text>Page 1</Text>
+              </View>
+
+              <View key="1">
+                <Text>Page 2</Text>
+              </View>
+            </PagerView>
           </View>
         </View>
+        <StatusBar hidden={false} translucent={false} />
       </ScrollView>
     </View>
   );
@@ -92,7 +201,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: hp(4),
     backgroundColor: 'white',
   },
   header: {
@@ -115,6 +223,11 @@ const styles = StyleSheet.create({
     height: hp(70),
     width: '100%',
     backgroundColor: 'white',
+  },
+  toggletext: {
+    fontSize: hp(2),
+    fontWeight: 'bold',
+    color: 'black',
   },
 });
 export default App;
