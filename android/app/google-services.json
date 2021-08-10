@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "131533074500",
+    "project_id": "classfieds-e2297",
+    "storage_bucket": "classfieds-e2297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131533074500:android:4cd39f75a6290d23548c11",
+        "android_client_info": {
+          "package_name": "com.classfieds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131533074500-fq0gd47o8vkgkjuoc4lb84vj4sffaovs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classfieds",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "131533074500-ub34i3lc3889voa3685j0fspk5nq4fuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfPsKn4qdhVgbGJgq8xNtih5rXhHqnvSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131533074500-ub34i3lc3889voa3685j0fspk5nq4fuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

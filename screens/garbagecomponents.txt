@@ -1,0 +1,408 @@
+<Header
+            containerStyle={{ backgroundColor: '#fff' }}
+            leftComponent={
+              <View>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.pop();
+                  }}>
+                  <Icons
+                    name="md-arrow-back-circle-outline"
+                    size={30}
+                    style={{ color: 'black' }}
+                  />
+                </TouchableOpacity>
+              </View>
+            }
+            centerComponent={
+              <Text
+                style={{ color: 'black', fontSize: 18, fontWeight: 'bold' }}>
+                Details Page
+              </Text>
+            }
+            rightComponent={
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}>
+                <TouchableOpacity>
+                  <Icons
+                    name="warning"
+                    size={25}
+                    style={{ color: '#F2BA49', marginHorizontal: 5 }}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Icons
+                    name="ios-share-social"
+                    size={25}
+                    style={{ color: 'black', marginHorizontal: 5 }}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Icons
+                    name="md-heart"
+                    size={25}
+                    style={{ color: 'red', marginHorizontal: 5 }}
+                  />
+                </TouchableOpacity>
+              </View>
+            }
+          />
+
+
+
+          <TouchableOpacity>
+                  <View style={{ alignItems: 'center', marginBottom: hp('2') }}>
+                    <Image
+                      source={{
+                        uri: 'https://image.flaticon.com/icons/png/512/235/235861.png',
+                      }}
+                      style={{
+                        height: 50,
+                        width: 50,
+                      }}
+                    />
+                    <Text style={{ color: 'white' }}>View on Map</Text>
+                  </View>
+                </TouchableOpacity>
+
+
+
+<View style={{flexDirection:'row'}}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    backgroundColor: '#111',
+                    padding: wp(1),
+                    borderRadius: 10,
+                    borderWidth: 1,
+                    borderStyle: 'dashed',
+                    borderColor: '#ededed',
+                    marginHorizontal: wp(2),
+                    position: 'absolute',
+                  }}>
+                  <Icons
+                    name="images-outline"
+                    size={20}
+                    style={{ color: 'white' }}
+                  />
+                  <View style={{ flexDirection: 'row' }}>
+                    <Text
+                      style={{
+                        color: 'white',
+                        fontSize: 10,
+                        marginLeft: wp(2),
+                      }}>
+                      01
+                    </Text>
+                    <Text
+                      style={{
+                        color: 'white',
+                        fontSize: 10,
+                      }}>
+                      / {product.image.length}
+                    </Text>
+                    <Text
+                      style={{
+                        color: 'white',
+                        fontSize: 10,
+                      }}>
+                      Photos
+                    </Text>
+                  </View>
+                </View>
+                <Icons
+                  name="ios-play-circle"
+                  size={30}
+                  style={{ color: 'gray', borderRadius: 10 }}
+                />
+              </View>
+
+
+<View
+            style={{
+              position: 'absolute',
+              top: hp(18),
+              width: '90%',
+              alignItems: 'center',
+              alignSelf: 'center',
+              backgroundColor: '#fff',
+              borderRadius: 5,
+            }}>
+            <View>
+              <View
+                style={{
+                  paddingHorizontal: 5,
+                  paddingVertical:10,
+                  backgroundColor: 'white',
+                  marginTop: -40,
+                  marginBottom: 6,
+                  borderRadius: 5,
+                }}>
+                <Image
+                  source={require('../components/man.png')}
+                  style={{
+                    alignSelf: 'center',
+                    height: 80,
+                    width: 80,
+                    elevation: 5,
+                  }}
+                  resizeMode="cover"
+                />
+              </View>
+              <View style={{ flexDirection: 'row',alignItems:'center',justifyContent:'center' }}>
+                <AirbnbRating
+                  type="star"
+                  ratingCount={5}
+                  defaultRating={rating}
+                  size={12}
+                  isDisabled={true}
+                  showRating={false}
+                  ratingBackgroundColor="#000"
+                  onFinishRating={value => {
+                    setRating(value);
+                  }}
+                />
+                <Text
+                  style={{ fontSize: 14, color: 'black', fontWeight: 'bold' }}>
+                  {' '}
+                  {rating}
+                </Text>
+              </View>
+              <View style={{flexDirection:'row'}}>
+                <Text style={{
+                  fontSize:18,
+                  color:'black',
+                  fontWeight:'bold',
+                  }}>Alex John Doe</Text>
+                <Image source={require('../components/check.png')}
+                style={{height:15,width:15}}
+                />
+              </View>
+              <View style={{marginVertical:hp(2)}}>
+
+              </View>
+            </View>
+          </View>
+
+
+<View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+              backgroundColor: 'black',
+              position: 'absolute',
+            }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.pop();
+                }}>
+                <Icon
+                  name="arrow-back-sharp"
+                  size={25}
+                  color="white"
+                  style={{ marginLeft: 10 }}
+                />
+              </TouchableOpacity>
+              <Text style={{ color: 'white', marginLeft: 10 }}>Profile</Text>
+            </View>
+
+            <View
+              style={{
+                flexDirection: 'row',
+                height: hp(5),
+                alignItems: 'center',
+              }}>
+              <Icon
+                name="create-outline"
+                size={20}
+                color="#fff"
+                style={{ marginRight: 2 }}
+              />
+              <Text style={{ color: 'white', marginRight: 10 }}>
+                Edit Profile
+              </Text>
+            </View>
+          </View>
+
+
+<>
+    <View style={{
+        height:250,
+        backgroundColor:'black',
+        }} />
+    <SafeAreaView style={styles.container}>
+      
+        <View style={{flex:1,marginTop:-250,alignItems:'center'}}>
+      <ScrollView style={{ flexGrow:1,backgroundColor: 'transparent',width:'100%', }}>
+        <View style={styles.maincontainer}>
+          {/* Top header */}
+            <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.pop();
+                }}>
+                <Icon
+                  name="arrow-back-sharp"
+                  size={25}
+                  color="white"
+                  style={{ marginLeft: 10 }}
+                />
+              </TouchableOpacity>
+              <Text style={{ color: 'white', marginLeft: 10 }}>Profile</Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                height: hp(5),
+                alignItems: 'center',
+              }}>
+              <Icon
+                name="create-outline"
+                size={20}
+                color="#fff"
+                style={{ marginRight: 2 }}
+              />
+              <Text style={{ color: 'white', marginRight: 10 }}>
+                Edit Profile
+              </Text>
+            </View>
+            </View>
+
+            {/* Profile view */}
+            <View style={{marginTop:hp(10),backgroundColor:'white'}}>
+              <View>
+              <View
+                style={{
+                  paddingHorizontal: 5,
+                  paddingVertical:10,
+                  backgroundColor: 'white',
+                  marginTop: -40,
+                  marginBottom: 6,
+                  borderRadius: 5,
+                }}>
+                <Image
+                  source={require('../components/man.png')}
+                  style={{
+                    alignSelf: 'center',
+                    height: 80,
+                    width: 80,
+                    elevation: 5,
+                  }}
+                  resizeMode="cover"
+                />
+              </View>
+              <View style={{ flexDirection: 'row',alignItems:'center',justifyContent:'center' }}>
+                <AirbnbRating
+                  type="star"
+                  ratingCount={5}
+                  defaultRating={rating}
+                  size={12}
+                  isDisabled={true}
+                  showRating={false}
+                  ratingBackgroundColor="#000"
+                  onFinishRating={value => {
+                    setRating(value);
+                  }}
+                />
+                <Text
+                  style={{ fontSize: 14, color: 'black', fontWeight: 'bold' }}>
+                  {' '}
+                  {rating}
+                </Text>
+              </View>
+              <View style={{flexDirection:'row'}}>
+                <Text style={{
+                  fontSize:18,
+                  color:'black',
+                  fontWeight:'bold',
+                  }}>Alex John Doe</Text>
+                <Image source={require('../components/check.png')}
+                style={{height:15,width:15}}
+                />
+              </View>
+              </View>
+            </View>
+        </View>
+      </ScrollView>
+      </View>
+      <StatusBar animted={true} hidden={true} />
+    </SafeAreaView>
+    </>
+
+
+    <View style={{flexDirection:'row'}}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'flex-start',
+                    padding: 10,
+                  }}>
+                  <Image
+                    source={{ uri: data.image }}
+                    resizeMode="cover"
+                    style={{ height: hp(7), width: hp(7) }}
+                  />
+                  <View>
+                    <View style={{ alignItems: 'center' }}>
+                      <Text
+                        style={{
+                          color: 'black',
+                          fontSize: 12,
+                          fontWeight: 'bold',
+                        }}>
+                        {data.name}
+                      </Text>
+                      <View style={{ flexDirection: 'row' }}>
+                        <AirbnbRating
+                          type="star"
+                          ratingCount={5}
+                          defaultRating={data.rating}
+                          size={15}
+                          isDisabled={true}
+                          showRating={false}
+                          ratingBackgroundColor="#000"
+                        />
+                        <Text style={{ paddingLeft: 2 }}>{data.rating}</Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View style={{width:'100%'}}>
+                <Text>{data.review}</Text>
+              </View>
+              </View>
+
+
+
+              {data != null ? (
+        data.map(data => {
+          return (
+            <View style={styles.slide1}>
+              <Image
+                style={{ height: 200, width: '100%' }}
+                source={{ uri: data.image }}
+                resizeMode="cover"
+              />
+              <Text>{data.name}</Text>
+            </View>
+          );
+        })
+      ) : (
+        <Text>Loading...</Text>
+      )}

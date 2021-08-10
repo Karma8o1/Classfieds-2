@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Classfieds.</string>
+    <string name="facebook_app_id">1073304123510163</string>
+    <string name="fb_login_protocol_scheme">fb1073304123510163</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBPSTIqqsvBij0NUxX65Qvv_7sRffRhRIE</string>
+</resources>
