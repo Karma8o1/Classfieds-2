@@ -15,6 +15,7 @@ import vendorprofile from './screens/vendordetails';
 import contact from './screens/contactseller';
 import billing from './screens/billing';
 import allbids from './screens/allbids';
+import postads from './screens/addpost';
 
 import { useSelector } from 'react-redux';
 
@@ -83,6 +84,11 @@ const App = () => {
             <Stack.Screen
               name="All Bids"
               component={allbids}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Post Ads"
+              component={postads}
               options={{ headerShown: false }}
             />
           </>

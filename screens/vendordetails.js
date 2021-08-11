@@ -33,9 +33,9 @@ import {
 import { AirbnbRating } from 'react-native-ratings';
 
 //imports for custome pager view components
-import Items from '../components/items';
-import Reviews from '../components/reviews';
-import WriteReviews from '../components/newreview';
+import Items from '../components/vendor/items';
+import Reviews from '../components/vendor/reviews';
+import WriteReviews from '../components/vendor/newreview';
 
 const App = ({ navigation, route }) => {
   const [details, setDetails] = useState(route.params);

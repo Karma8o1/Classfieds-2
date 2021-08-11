@@ -119,7 +119,7 @@ const App = ({navigation}) => {
                                 </View>
                                 <Text style={styles.title}>{item.name.substring(0,20)} ...</Text>
                                 <View style={{paddingBottom:3,flexDirection:'row',alignItems:'center'}}>
-                                    <Image source={require('../components/map.png')}
+                                    <Image source={require('../map.png')}
                                     style={{height:20,width:20}}
                                     resizeMode="cover"
                                     />

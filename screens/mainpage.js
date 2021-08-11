@@ -1,6 +1,8 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swiper from 'react-native-swiper';
 import {
@@ -18,8 +20,7 @@ import {
   RefreshControl,
 } from 'react-native';
 import { ActivityIndicator, Colors } from 'react-native-paper';
-import {
-} from '@react-navigation/drawer';
+import {} from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 import {
   widthPercentageToDP as wp,
@@ -99,11 +100,9 @@ const App = ({ navigation }) => {
       }}>
       <View
         style={
-          // eslint-disable-next-line no-sequences
           (styles.container,
           {
             height: '100%',
-            // opacity: fadeAnim,
           })
         }>
         <View>
@@ -179,7 +178,7 @@ const App = ({ navigation }) => {
             style={{
               flex: 1,
               marginTop: hp(0),
-              backgroundColor: 'transparent',
+              backgroundColor: 'white',
             }}
             refreshControl={
               <RefreshControl
@@ -273,11 +272,16 @@ const App = ({ navigation }) => {
                       </View>
                     )}
                   />
-                  <View style={{ width: '95%', alignSelf: 'center',marginTop:hp(1.5) }}>
+                  <View
+                    style={{
+                      width: '95%',
+                      alignSelf: 'center',
+                      marginTop: hp(1.5),
+                    }}>
                     <Swiper
                       style={styles.wrapper}
                       loop={false}
-                      key= {img.length}
+                      key={img.length}
                       loadMinimalLoader={
                         <ActivityIndicator
                           animating={true}
@@ -316,7 +320,11 @@ const App = ({ navigation }) => {
                         return (
                           <View key={images.position} style={styles.slide1}>
                             <Image
-                              style={{ height: hp(25), width: '100%',borderRadius:5 }}
+                              style={{
+                                height: hp(25),
+                                width: '100%',
+                                borderRadius: 5,
+                              }}
                               source={{ uri: images }}
                               resizeMode="cover"
                             />
@@ -379,10 +387,10 @@ const App = ({ navigation }) => {
                       showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
                       style={{
-                        flex:1,
+                        flex: 1,
                         marginTop: hp(2),
                         paddingLeft: wp(2),
-                        paddingRight:20,
+                        paddingRight: 20,
                       }}
                       data={cards}
                       renderItem={({ item }) => (
@@ -391,8 +399,7 @@ const App = ({ navigation }) => {
                             style={{ borderRadius: 5 }}
                             onPress={() => {
                               navigation.navigate('Details', item);
-                            }}
-                            >
+                            }}>
                             <View
                               style={{
                                 width: wp(45),
@@ -491,9 +498,7 @@ const App = ({ navigation }) => {
                                     }}
                                     style={{ height: 20, width: 20 }}
                                   />
-                                  <Text>
-                                    {item.location}
-                                  </Text>
+                                  <Text>{item.location}</Text>
                                 </View>
                                 <View
                                   style={{
@@ -508,7 +513,7 @@ const App = ({ navigation }) => {
                                         padding: wp(1),
                                         marginHorizontal: wp(1),
                                         borderRadius: 10,
-                                        marginRight:15,
+                                        marginRight: 15,
                                       }}>
                                       <Icon
                                         name="heart"
@@ -607,18 +612,19 @@ const App = ({ navigation }) => {
                       keyExtractor={item => item.id}
                       showsHorizontalScrollIndicator={false}
                       style={{
-                        flex:1,
+                        flex: 1,
                         marginTop: hp(2),
-                        paddingRight:wp(2),
+                        paddingRight: wp(2),
                       }}
                       data={cards}
                       renderItem={({ item }) => (
-                        <TouchableNativeFeedback onPress={()=>{
-                          navigation.navigate('Details', item);
-                        }}>
+                        <TouchableNativeFeedback
+                          onPress={() => {
+                            navigation.navigate('Details', item);
+                          }}>
                           <View
                             style={{
-                              flex:1,
+                              flex: 1,
                               width: wp(45),
                               marginHorizontal: wp(1.2),
                               elevation: 5,
@@ -686,9 +692,7 @@ const App = ({ navigation }) => {
                                   }}
                                   style={{ height: 20, width: 20 }}
                                 />
-                                <Text>
-                                  {item.location}
-                                </Text>
+                                <Text>{item.location}</Text>
                               </View>
                               <View
                                 style={{
@@ -703,7 +707,7 @@ const App = ({ navigation }) => {
                                       padding: wp(1),
                                       marginHorizontal: wp(1),
                                       borderRadius: 10,
-                                      marginRight:15,
+                                      marginRight: 15,
                                     }}>
                                     <Icon
                                       name="heart"
@@ -753,6 +757,59 @@ const App = ({ navigation }) => {
               </View>
             </>
           </ScrollView>
+        </View>
+        <View
+        style={{
+          width:'100%',
+          height:hp(7),
+          backgroundColor:'#fff',
+          borderColor:'#d3d3d3',
+          borderTopWidth:1,
+          elevation:5,
+          flexDirection:'row',
+          justifyContent:'space-around',
+          alignItems:'center',
+          paddingHorizontal:wp(3),
+      }}>
+        <TouchableOpacity style={{alignItems:'center'}}>
+          <Icons name="home" size={30} />
+          <Text style={{color:'black',fontSize:10}}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+        onPress = {()=>{navigation.navigate('Advance Search');}}
+        style={{alignItems:'center'}}>
+          <Icons name="search" size={30} />
+          <Text style={{color:'black',fontSize:10}}>Search</Text>
+        </TouchableOpacity>
+        <View style={{alignItems:'center'}}>
+          <TouchableOpacity
+          onPress={()=>{navigation.navigate('Post Ads');}}
+          style={{
+            position:'absolute',
+            top:hp(-6),
+            alignItems:'center',
+            justifyContent:'center',
+            paddingVertical:hp(2),
+            paddingHorizontal:hp(2),
+            backgroundColor:'#0077f9',
+            borderRadius:50,
+            borderWidth:2,
+            borderStyle:'dashed',
+            borderColor:'#d3d3d3',
+            }}>
+            <Icon name="plus" size={35} color="white" />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity
+        onPress = {()=>{navigation.navigate('Profile');}}
+        style={{alignItems:'center'}}>
+          <Icons name="person" size={30} />
+          <Text style={{color:'black',fontSize:10}}>Profile</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{alignItems:'center'}}>
+          <Icons name="settings" size={30} />
+          <Text style={{color:'black',fontSize:10}}>Settings</Text>
+        </TouchableOpacity>
         </View>
       </View>
       <StatusBar animated={true} backgroundColor="#011642" />

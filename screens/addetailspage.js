@@ -99,7 +99,7 @@ const App = ({ route, navigation }) => {
     _countDown(product.timeend);
   });
 
-  const _countDown = end => {
+  const _countDown = (end) => {
     const current = new Date();
     const End = new Date(end);
     var difference = Math.floor((End - current) / 1000);
@@ -866,12 +866,12 @@ const App = ({ route, navigation }) => {
               <DialogFooter>
                 <DialogButton
                 textStyle={{fontSize:12}}
-                  text="CANCEL"
+                  text="Cancel"
                   onPress={() => {setVisible(false);}}
                 />
                 <DialogButton
                   textStyle={{fontSize:12}}
-                  text="OK"
+                  text="Ok"
                   onPress={() => {
                     setVisible(false);
                     navigation.navigate('All Bids');}}
@@ -880,9 +880,12 @@ const App = ({ route, navigation }) => {
             }
             >
               <DialogContent>
-                  <Text style={{paddingTop:15,fontSize:20,color:'black'}}>
-                    See All Bids
+                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+                  <Text style={{paddingTop:15,fontSize:16,color:'black'}}>
+                    See all Bids
                     </Text>
+                    <Icons name="md-checkmark-done-outline" size={25} color="green" />
+                    </View>
               </DialogContent>
           </Dialog>
         </View>

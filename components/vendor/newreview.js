@@ -152,7 +152,7 @@ const App = () => {
         </View>
       </View>
         <TouchableNativeFeedback>
-            <View style={[styles.button,{position:'absolute',alignSelf:'center',bottom:hp(5),borderRadius:5}]}>
+            <View style={[styles.button,{position:'absolute',bottom:hp(10),alignSelf:'center',borderRadius:5}]}>
                 <Text style={[styles.title,{color:'white'}]}>Submit Review</Text>
             </View>
         </TouchableNativeFeedback>
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
       borderRadius:5,
   },
   button: {
-    width: '100%',
+    width: '90%',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#049cff',

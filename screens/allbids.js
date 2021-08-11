@@ -27,6 +27,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import PagerView from 'react-native-pager-view';
 
+import Bids from '../components/bids';
+import BidStats from '../components/bidsstats';
+
 const App = ({navigation}) => {
   //    for view pager
   const pageRef = useRef(null);
@@ -52,6 +55,12 @@ const App = ({navigation}) => {
       image:
         'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
       id: 0,
+      description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
     },
     {
         name: 'Alex John Doe',
@@ -59,6 +68,12 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 1,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
       },
       {
         name: 'Alex John Doe',
@@ -66,6 +81,12 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 2,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+        + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+        + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        date:'Feb 12, 2020',
       },
       {
         name: 'Alex John Doe',
@@ -73,6 +94,12 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
       },
       {
         name: 'Alex John Doe',
@@ -80,6 +107,12 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 4,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
       },
       {
         name: 'Alex John Doe',
@@ -87,6 +120,12 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 5,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
       },
       {
         name: 'Alex John Doe',
@@ -94,11 +133,87 @@ const App = ({navigation}) => {
         image:
           'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
         id: 6,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 7,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 8,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 9,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
+      },
+      {
+        name: 'Alex John Doe',
+        bid: '56.00',
+        image:
+          'https://drive.google.com/uc?export=download&id=1e55vwncLLReLhaTa-SYwSz9Wd5mdQbHZ',
+        id: 10,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '
+    + 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    + ' ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+    + ' voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+    + 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    date:'Feb 12, 2020',
       },
   ]);
+  const setPages = position => {
+    if (position === 1 ){
+      setColor({
+        all: '#0099ff',
+        stats: '#fff',
+        alltext: '#fff',
+        statstext: '#000',
+      });
+    }
+    else if (position === 2){
+      setColor({
+        all: '#fff',
+        stats: '#0099ff',
+        alltext: '#000',
+        statstext: '#fff',
+      });
+    }
+  };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView
         style={{ flexGrow: 1, width: '100%', backgroundColor: 'white' }}>
         <View>
@@ -124,7 +239,7 @@ const App = ({navigation}) => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   width: '75%',
-                  height: hp(7),
+                  height: hp(6),
                   borderRadius: 50,
                   backgroundColor: color.all,
                 }}>
@@ -136,6 +251,7 @@ const App = ({navigation}) => {
                       alltext: '#fff',
                       statstext: '#000',
                     });
+                    handleChange(0);
                   }}
                   style={{ paddingHorizontal: wp(5) }}>
                   <Text style={[styles.toggletext, { color: color.alltext }]}>
@@ -150,9 +266,12 @@ const App = ({navigation}) => {
                       alltext: '#000',
                       statstext: '#fff',
                     });
+                    handleChange(1);
                   }}
                   style={{
-                    height: hp(7),
+                    height: hp(6),
+                    width:'55%',
+                    alignItems:'center',
                     justifyContent: 'center',
                     paddingHorizontal: wp(5),
                     borderRadius: 50,
@@ -171,28 +290,28 @@ const App = ({navigation}) => {
               ref={pageRef}
               transitionStyle="curl"
               onPageSelected={e => {
-                setPage(e.nativeEvent.position + 1);
+                setPages(e.nativeEvent.position + 1);
               }}
               scrollEnabled={true}
               style={{
                 flex: 1,
-                height: hp(70),
+                height: hp(100),
                 width: '100%',
                 backgroundColor: 'white',
               }}>
               <View key="0">
-                <Text>Page 1</Text>
+                <Bids data={data} />
               </View>
 
               <View key="1">
-                <Text>Page 2</Text>
+              <BidStats data={data} />
               </View>
             </PagerView>
           </View>
         </View>
         <StatusBar hidden={false} translucent={false} />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -225,7 +344,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   toggletext: {
-    fontSize: hp(2),
+    fontSize: hp(1.75),
     fontWeight: 'bold',
     color: 'black',
   },

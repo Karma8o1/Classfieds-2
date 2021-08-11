@@ -408,7 +408,7 @@ const App = ({ route, navigation }) => {
                 <Text style={{color:'red'}}>Delete Account ?</Text>
             </TouchableOpacity>
         </View>
-        <TouchableOpacity 
+        <TouchableOpacity
         onPress={props.handleSubmit}
         style={styles.spacing}>
         <View style={{

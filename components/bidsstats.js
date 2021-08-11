@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 //Toast Notifications
 import Toast from 'react-native-toast-message';
@@ -37,13 +37,15 @@ import {
 } from 'react-native-responsive-screen';
 
 const App = ({ data }) => {
+
   return (
     <View style={styles.container}>
       <FlatList
+        style={{width:'100%'}}
         data={data}
+        nestedScrollEnabled={true}
         keyExtractor={item => item.id}
         showsVerticalScrollIndicator={false}
-        nestedScrollEnabled={true}
         renderItem={({ item }) => (
           <View
             style={{
@@ -97,9 +99,6 @@ const App = ({ data }) => {
                   <Text style={{fontWeight:'bold'}}>$ {item.bid}</Text>
               </View>
             </View>
-            <View>
-              <Text>{item.description.substring(0, 100)}...</Text>
-            </View>
           </View>
         )}
       />
@@ -111,6 +110,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width:'100%',
   },
   heading:{
       fontSize:16,

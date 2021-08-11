@@ -19,7 +19,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import { RadioButton } from 'react-native-paper';
+import { Checkbox } from 'react-native-paper';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -190,7 +190,7 @@ const App = ({ navigation }) => {
                       paddingHorizontal:10,
                       marginBottom:5,
                   }}>
-                    <RadioButton
+                    <Checkbox
                         value={item.id}
                         status={ item.checked ? 'checked' : 'unchecked'}
                         onPress={() => _check(item.id)}
@@ -332,7 +332,7 @@ const App = ({ navigation }) => {
         </View>
         </View>
       </ScrollView>
-      <StatusBar hidden={false} animated={true} backgroundColor="black" />
+      <StatusBar translucent={false} animated={true} backgroundColor="black" />
     </SafeAreaView>
   );
 };
@@ -341,7 +341,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:hp(4),
   },
   header: {
     backgroundColor: 'black',
